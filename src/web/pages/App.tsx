@@ -1,13 +1,15 @@
 import React from 'react';
-import Router from 'react-router';
-import { BrowserRouter, Route } from 'react-router-dom';
+
+import { BrowserRouter } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
+import routes from '@routes/index';
 
 const App = () => {
     return (
-        <BrowserRouter>
-
-        </BrowserRouter>
-    )
+        // <RecoilRoot>
+        <BrowserRouter>{routes()}</BrowserRouter>
+        // </RecoilRoot>
+    );
 };
 
 export default App;

@@ -3,4 +3,7 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    color: yellowgreen;
+    font-size: 24px;
+    padding: 24px;
 }
