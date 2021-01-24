@@ -7,10 +7,11 @@ import Loading from '@components/Loading';
 
 const Home = lazy(() => import(/* webpackChunkName:"home" */ '@components/Home/home.tsx'));
 const About = lazy(() => import(/* webpackChunkName:"about" */ '@components/About/about.tsx'));
+const StateStudy = lazy(() => import(/* webpackChunkName:"about" */ '@components/StateStudy'));
 
 const routes: RouteProps[] = [
-    { path: '/', exact: true, component: Home },
-    { path: '/about', exact: true, component: About },
+    { path: '/', exact: true, component: StateStudy },
+    { path: '/about', exact: true, component: About }
 ];
 
 const Routes = () => (
