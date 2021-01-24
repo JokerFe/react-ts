@@ -1,7 +1,7 @@
 /*
  * @Author: haorongzheng
  * @Date: 2021-01-24 13:40:53
- * @LastEditTime: 2021-01-24 14:41:25
+ * @LastEditTime: 2021-01-24 15:06:05
  * @LastEditors: haorongzheng
  * @Description: Fiber相关
  * @FilePath: /react-ts/src/web/components/StateStudy/index.tsx
@@ -36,23 +36,20 @@ export default class FiberStudy extends React.Component<RouteComponentProps,Fibe
         this.state = {
             tag:0
         }
-        this.handleBtnClick = this.handleBtnClick.bind(this);
-        this.handleBtnClickSync = this.handleBtnClickSync.bind(this);
-        this.handleTimeOutClick = this.handleTimeOutClick.bind(this);
     }
-    handleTimeOutClick() {
+    handleTimeOutClick=()=> {
         setTimeout(()=>{
             this.setState({tag:3})
             console.log(this.state.tag)
         })
     }
-    handleBtnClickSync(){
+    handleBtnClickSync=()=>{
         flushSync(()=>{
             this.setState({tag:2})
         })
         console.log(this.state.tag)
     }
-    handleBtnClick(){
+    handleBtnClick=()=>{
         this.setState({
             tag:1
         })
